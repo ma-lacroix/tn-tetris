@@ -15,7 +15,6 @@
 #include <iostream>
 #include <vector>
 #include "Field.hpp"
-#include "ResourcePath.hpp"
 
 
 class Piece {

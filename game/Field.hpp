@@ -15,7 +15,6 @@
 #include <vector>
 #include <iostream>
 #include "Messages.hpp"
-#include "ResourcePath.hpp"
 
 class Field {
 private:

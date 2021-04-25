@@ -14,7 +14,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <string>
-#include "ResourcePath.hpp"
 
 class Message{
 private:

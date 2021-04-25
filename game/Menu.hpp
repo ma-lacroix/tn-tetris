@@ -14,7 +14,6 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "ResourcePath.hpp"
 
 class Menu {
 private:

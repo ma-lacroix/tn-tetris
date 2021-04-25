@@ -11,7 +11,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
-#include "ResourcePath.hpp"
 #include "Background.hpp"
 #include "Pieces.hpp"
 #include "Messages.hpp"
