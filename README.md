@@ -9,7 +9,8 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 *   Art & design:
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
-[](/example.png)
+![example]
+(https://github.com/ma-lacroix/tn-tetris/example.png)
 
 ## How to play
 
