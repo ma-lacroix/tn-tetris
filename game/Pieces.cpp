@@ -11,8 +11,8 @@
 
 Piece::Piece(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int c_type){
     
-    if(!m_texture.loadFromFile(resourcePath() + "p_tetris_blocks_1.png")){
-        return EXIT_FAILURE;
+    if(!m_texture.loadFromFile("Resources/images/p_tetris_blocks_1.png")){;
+        std::cout << "error loading image" << std::endl;
     }
     
     switch (c_type) {
@@ -80,7 +80,7 @@ Piece::Piece(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int c_type){
         ++i;
     }
     
-    n6.loadFromFile(resourcePath() + "n_rotate.wav");
+    n6.loadFromFile("Resources/sounds/n_switch.wav");
     n_rotate.setBuffer(n6);
     n_rotate.setVolume(50.0f);
 }

@@ -14,11 +14,11 @@ Field::Field(){
     m_velocity_init = -0.20f; // decrease to make block explosions bigger
     m_velocity = m_velocity_init;
     
-    n4.loadFromFile(resourcePath() + "n_impact2.wav");
+    n4.loadFromFile("Resources/sounds/n_impact2.wav");
     n_stop.setBuffer(n4);
     n_stop.setVolume(80);
     
-    n5.loadFromFile(resourcePath() + "n_explode2.wav");
+    n5.loadFromFile("Resources/sounds/n_explode1.wav");
     n_explode.setBuffer(n5);
 }
 

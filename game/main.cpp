@@ -47,8 +47,7 @@ std::vector<Message*> gen2(sf::Font c_font,int c_size,sf::Vector2f c_pos,float c
         Message* m = new Message(c_font,c_size,msgs.at(i),c_pos,c_speed);
         c_messages.push_back(m);
     }
-    return c_messages;
-    
+    return c_messages;   
 }
 
 
@@ -56,14 +55,14 @@ int main(){
     
     // music
     sf::Music s_menu;
-    if (!s_menu.openFromFile(resourcePath() + "s_menu.ogg")) {
+    if (!s_menu.openFromFile("Resources/music/s_menu.ogg")) {
         return EXIT_FAILURE;
     }
     s_menu.setVolume(40.0f);
     s_menu.setPlayingOffset(sf::seconds(6.5f));
     
     sf::Music s_playing;
-    if (!s_playing.openFromFile(resourcePath() + "s_playing.ogg")) {
+    if (!s_playing.openFromFile("Resources/music/s_playing.ogg")) {
         return EXIT_FAILURE;
     }
     s_playing.setVolume(40.0f);
@@ -71,7 +70,7 @@ int main(){
     
     sf::Sound n_pause;
     sf::SoundBuffer n10;
-    if(!n10.loadFromFile(resourcePath() + "n_pause.wav")){
+    if(!n10.loadFromFile("Resources/sounds/n_pause.wav")){
         return EXIT_FAILURE;
     }
     n_pause.setBuffer(n10);
@@ -96,7 +95,7 @@ int main(){
     
     
     sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "Excludedi.ttf")) {
+    if (!font.loadFromFile("Resources/images/Excludedi.ttf")) {
         return EXIT_FAILURE;
     }
     

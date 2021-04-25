@@ -10,25 +10,25 @@
 
 Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     
-    if(!m_easy_textu_1.loadFromFile(resourcePath()+"b_m_easy_peasy_deselected.png")){
-         return EXIT_FAILURE;
+    if(!m_easy_textu_1.loadFromFile("Resources/images/b_m_easy_peasy_deselected.png")){
+         std::cout << "error loading file" << std::endl;
     }
-    if(!m_easy_textu_2.loadFromFile(resourcePath()+"b_m_easy_peasy_selected.png")){
-         return EXIT_FAILURE;
-    }
-    
-    if(!m_medium_textu_1.loadFromFile(resourcePath()+"b_m_dude_seriously_deselected.png")){
-         return EXIT_FAILURE;
-    }
-    if(!m_medium_textu_2.loadFromFile(resourcePath()+"b_m_dude_seriously_selected.png")){
-         return EXIT_FAILURE;
+    if(!m_easy_textu_2.loadFromFile("Resources/images/b_m_easy_peasy_selected.png")){
+         std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_hard_textu_1.loadFromFile(resourcePath()+"b_m_f_this_deselected.png")){
-         return EXIT_FAILURE;
+    if(!m_medium_textu_1.loadFromFile("Resources/images/b_m_dude_seriously_deselected.png")){
+         std::cout << "error loading file" << std::endl;
     }
-    if(!m_hard_textu_2.loadFromFile(resourcePath()+"b_m_f_this_selected.png")){
-         return EXIT_FAILURE;
+    if(!m_medium_textu_2.loadFromFile("Resources/images/b_m_dude_seriously_selected.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+    
+    if(!m_hard_textu_1.loadFromFile("Resources/images/b_m_f_this_deselected.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+    if(!m_hard_textu_2.loadFromFile("Resources/images/b_m_f_this_selected.png")){
+         std::cout << "error loading file" << std::endl;
     }
     
     this->m_font = c_font;
@@ -75,15 +75,15 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     Update_menu_selection();
     
     // sounds
-    n1.loadFromFile(resourcePath() + "n_start.wav");
+    n1.loadFromFile("Resources/sounds/n_start.wav");
     n_start.setBuffer(n1);
     n_start.setVolume(80);
     
-    n2.loadFromFile(resourcePath() + "n_switch.wav");
+    n2.loadFromFile("Resources/sounds/n_switch.wav");
     n_switch.setBuffer(n2);
     n_switch.setVolume(80);
     
-    n3.loadFromFile(resourcePath() + "n_enter.wav");
+    n3.loadFromFile("Resources/sounds/n_enter.wav");
     n_enter.setBuffer(n3);
     n_enter.setVolume(80);
     

@@ -13,40 +13,40 @@ Background::Background(float SCREEN_WIDTH, float SCREEN_HEIGHT,sf::Color c_color
     
     std::cout << "Background constructor called" << std::endl;
     
-    if(!m_intro_texture.loadFromFile(resourcePath() + "b_intro.png")){
-        return EXIT_FAILURE;
+    if(!m_intro_texture.loadFromFile("Resources/images/b_intro.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_flicker_texture.loadFromFile(resourcePath() + "b_flickers.png")){
-        return EXIT_FAILURE;
+    if(!m_flicker_texture.loadFromFile("Resources/images/b_flickers.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_press_space_texture.loadFromFile(resourcePath() + "b_press_space.png")){
-        return EXIT_FAILURE;
+    if(!m_press_space_texture.loadFromFile("Resources/images/b_press_space.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_menu_texture.loadFromFile(resourcePath() + "b_menu.png")){
-        return EXIT_FAILURE;
+    if(!m_menu_texture.loadFromFile("Resources/images/b_menu.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_background_texture.loadFromFile(resourcePath() + "b_background.png")){
-        return EXIT_FAILURE;
+    if(!m_background_texture.loadFromFile("Resources/images/b_background.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_main_texture.loadFromFile(resourcePath() + "b_playing_area.png")){
-        return EXIT_FAILURE;
+    if(!m_main_texture.loadFromFile("Resources/images/b_playing_area.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_second_texture.loadFromFile(resourcePath() + "b_next.png")){
-        return EXIT_FAILURE;
+    if(!m_second_texture.loadFromFile("Resources/images/b_next.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_third_texture.loadFromFile(resourcePath() + "b_score.png")){
-        return EXIT_FAILURE;
+    if(!m_third_texture.loadFromFile("Resources/images/b_score.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
-    if(!m_rose_texture.loadFromFile(resourcePath() + "b_rose.png")){
-        return EXIT_FAILURE;
+    if(!m_rose_texture.loadFromFile("Resources/images/b_rose.png")){
+        std::cout << "error loading file" << std::endl;
     }
     
     this->m_s_size = {SCREEN_WIDTH,SCREEN_HEIGHT};

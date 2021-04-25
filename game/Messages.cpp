@@ -22,19 +22,19 @@ Message::Message(sf::Font c_font,int c_size,std::string c_message,sf::Vector2f c
     m_text.setPosition(m_position);
     m_text.setFillColor(sf::Color(0,0,0,200));
     
-    n8.loadFromFile(resourcePath() + "n_good.wav");
+    n8.loadFromFile("Resources/sounds/n_good.wav");
     n_good.setBuffer(n8);
     n_good.setVolume(90);
     
-    n9.loadFromFile(resourcePath() + "n_all_right.wav");
+    n9.loadFromFile("Resources/sounds/n_all_right.wav");
     n_all_right.setBuffer(n9);
     n_all_right.setVolume(90);
     
-    n10.loadFromFile(resourcePath() + "n_yyy.wav");
+    n10.loadFromFile("Resources/sounds/n_yyy.wav");
     n_yyy.setBuffer(n10);
     n_yyy.setVolume(90);
     
-    n11.loadFromFile(resourcePath() + "n_onbc.wav");
+    n11.loadFromFile("Resources/sounds/n_onbc.wav");
     n_onbc.setBuffer(n11);
     n_onbc.setVolume(90);
     
