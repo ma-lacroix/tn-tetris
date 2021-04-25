@@ -10,7 +10,7 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
 ![example]
-(https://github.com/ma-lacroix/tn-tetris/blob/master/example.png)
+(./example.png)
 
 ## How to play
 
