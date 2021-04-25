@@ -95,7 +95,7 @@ int main(){
     
     
     sf::Font font;
-    if (!font.loadFromFile("Resources/images/Excludedi.ttf")) {
+    if (!font.loadFromFile("Resources/font/Excludedi.ttf")) {
         return EXIT_FAILURE;
     }
     
