@@ -9,8 +9,7 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 *   Art & design:
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
-![example]
-(./example.png)
+![example](example.png)
 
 ## How to play
 
