@@ -9,7 +9,7 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 *   Art & design:
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
-<img src="example.png" align="center" height="527" width="282" >
+<img src="example.png" class="center" height="527" width="282" >
 <!-- ![example](example.png) -->
 
 ## How to play
