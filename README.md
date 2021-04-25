@@ -1,6 +1,20 @@
 # TNTetris
 
-TNTetris is a desktop game powered by the Simple Fast Multimedia Language ([SFML]https://www.sfml-dev.org/). This project was built by 2 amateurs indie game developpers wanting to learn more about the fascinating world of building video games. 
+TNTetris is a desktop game powered by the Simple Fast Multimedia Language ([SFML](https://www.sfml-dev.org/)). It's Tetris, but with extra explosive effects when rows are completed. Fans of certain modern games may recognise where we got our inspiration from.
+This project was built by 2 amateur indie game developpers wanting to learn more about the fascinating world of building video games. 
+
+Development & code:
+[Marc-Antoine Lacroix](https://www.linkedin.com/in/marcantoinelacroix/)
+
+Art & design:
+[Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
+
+## How to play
+
+*Arrows: move pieces
+*Spacebar: start game & rotate piece
+*P key: pause the game
+*R key: reset the game
 
 ## How to install on a Mac
 
