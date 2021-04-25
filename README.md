@@ -1,6 +1,6 @@
 # TN-Tetris
 
-TNTetris is a desktop game powered by the Simple Fast Multimedia Language ([SFML](https://www.sfml-dev.org/)). It's Tetris, but with extra explosive effects when rows are completed. Fans of certain modern games may recognise where we got our inspiration from.
+TN-Tetris is a desktop game powered by the Simple Fast Multimedia Language ([SFML](https://www.sfml-dev.org/)). It's Tetris, but with extra explosive effects when rows are completed. Fans of certain modern games may recognise where we got our inspiration from.
 This project was built by 2 amateur indie game developpers wanting to learn more about the fascinating world of building video games. 
 
 *   Development, code & voice overs:

@@ -89,7 +89,7 @@ int main(){
     
     // Create the main window
     sf::Vector2f screen_size {SCREEN_WIDTH,SCREEN_HEIGHT};
-    sf::RenderWindow window(sf::VideoMode(screen_size.x,screen_size.y),"T.N.TETRIS",sf::Style::Titlebar | sf::Style::Resize);
+    sf::RenderWindow window(sf::VideoMode(screen_size.x,screen_size.y),"TN-TETRIS",sf::Style::Titlebar | sf::Style::Resize);
     sf::View view(screen_size/2.0f,screen_size);
     
     
