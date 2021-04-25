@@ -3,14 +3,16 @@
 TNTetris is a desktop game powered by the Simple Fast Multimedia Language ([SFML](https://www.sfml-dev.org/)). It's Tetris, but with extra explosive effects when rows are completed. Fans of certain modern games may recognise where we got our inspiration from.
 This project was built by 2 amateur indie game developpers wanting to learn more about the fascinating world of building video games. 
 
-*   Development & code:
+*   Development, code & voice overs:
 [Marc-Antoine Lacroix](https://www.linkedin.com/in/marcantoinelacroix/)
 
 *   Art & design:
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
+*   Music:
+[Tri-Tachyon & Alexandr Zhelanov on Opengameart.org](Opengameart.org)
+
 <img src="example.png" class="center" height="527" width="282" >
-<!-- ![example](example.png) -->
 
 ## How to play
 
