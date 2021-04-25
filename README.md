@@ -10,7 +10,7 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
 *   Music:
-[Tri-Tachyon & Alexandr Zhelanov on Opengameart.org](Opengameart.org)
+[Tri-Tachyon & Alexandr Zhelanov - Opengameart.org](https://www.opengameart.org)
 
 <img src="example.png" class="center" height="527" width="282" >
 
