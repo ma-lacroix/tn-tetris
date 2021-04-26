@@ -27,13 +27,13 @@ Here are the general instructions how to compile and run the game. Note that if 
 
 **1. Download or clone this repo**
 
-**2. Get SFML with this command:**
+**2. Get SFML using Brew with this command:**
 ````brew install sfml````
 
 **3. Open a new Terminal and go into the 'game' folder**
 
 **4. Compile and run with this command:**
-````g++ -std=c++17 "/*.cpp -F/Library/Frameworks -framework sfml-audio -framework sfml-graphics -framework sfml-window -framework sfml-system -o main && main````
+````g++ -std=c++17 *.cpp -F/Library/Frameworks -framework sfml-audio -framework sfml-graphics -framework sfml-window -framework sfml-system -o tntetris && ./tntetris````
 
 ## How to install on a Windows machine
 
