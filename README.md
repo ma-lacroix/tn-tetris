@@ -9,10 +9,10 @@ This project was built by 2 amateur indie game developpers wanting to learn more
 *   Art & design:
 [Johnny Khalil](https://www.linkedin.com/in/johnnykhalil/)
 
+<img src="example.png" class="center" height="527" width="282" >
+
 *   Music:
 [Tri-Tachyon & Alexandr Zhelanov - Opengameart.org](https://www.opengameart.org)
-
-<img src="example.png" class="center" height="527" width="282" >
 
 ## How to play
 

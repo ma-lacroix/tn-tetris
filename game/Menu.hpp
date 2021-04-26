@@ -1,6 +1,6 @@
 //
 //  Menu.hpp
-//  super_tetris
+//  tntetris
 //
 //  Created by Marc-Antoine Lacroix on 14/04/2021.
 //  Copyright © 2021 Marc-Antoine Lacroix. All rights reserved.
