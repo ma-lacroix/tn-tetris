@@ -17,8 +17,6 @@
 
 class Menu {
 private:
-    std::vector<sf::Text> m_others;
-    std::vector<sf::Text> m_difficulty;
     std::vector<sf::RectangleShape> m_diff_des;
     std::vector<sf::RectangleShape> m_diff_sel;
     std::size_t m_selection;
@@ -26,11 +24,6 @@ private:
     int m_s_size;
     int m_b_size;
     sf::Font m_font;
-    sf::Text t_introduction;
-    sf::Text t_begin;
-    sf::Text t_pause;
-    sf::Text t_game_over;
-    sf::Text t_credits;
     sf::RectangleShape m_easy_1;
     sf::Texture m_easy_textu_1;
     sf::RectangleShape m_easy_2;
@@ -63,6 +56,7 @@ public:
     ~Menu();
     float Get_difficulty();
     void Move_selector(float);
+    void Move_gameOver(float);
     void Move_options(float);
     void Update_menu_selection();
     void Play_d_menu();

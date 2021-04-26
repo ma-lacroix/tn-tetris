@@ -103,7 +103,9 @@ int main(){
     Background* background = new Background(SCREEN_WIDTH,SCREEN_HEIGHT,sf::Color::Red,font);
     std::vector<Piece*> pieces = gen(background->Get_play_size(),background->Get_play_pos(),200);
     std::vector<Message*> messages = gen2(font,300,{SCREEN_WIDTH,SCREEN_HEIGHT/3},10.0f);
-    State state = State::INTRO;
+    
+    // State state = State::INTRO;
+    State state = State::GAME_OVER;
     
     // Start the game loop
     while (window.isOpen())
@@ -298,9 +300,12 @@ int main(){
                 state = State::GAME_OVER;
             }
         }else if(state==State::PAUSE){
+            background->Draw(window);
             menu->Draw(window, 3);
         }else{
-            view.setCenter(screen_size.x/2.0f,screen_size.y/2.0f);
+            // view.setCenter(screen_size.x/2.0f,screen_size.y/2.0f);
+            menu->Move_gameOver(totalTime);
+            background->Draw(window);
             menu->Draw(window,2);
         }
         // Update the window
