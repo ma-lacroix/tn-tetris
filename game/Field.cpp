@@ -187,15 +187,16 @@ bool Field::CheckEndGame(){
     return false;
 }
 
-void Field::Explode(float deltaTime){
+void Field::Explode(float deltaTime, Message* c_message){
     int counter {0};
     for(size_t i {0};i<m_field.size();++i){
         int randv = sqrt(rand()%10+1);
         m_velocity += deltaTime/(350.0f);
-        if(m_field.at(i).getPosition().y < 2000.0f){
+        if(m_field.at(i).getPosition().y < 1700.0f){
             m_field.at(i).setOrigin(20.0f, 20.0f);
             m_field.at(i).rotate(sinf(i)/randv);
             m_field.at(i).move(-sinf(i)/randv,m_velocity);
+            c_message->Move(deltaTime/(20.0f));
             ++counter;
         }
     }
@@ -210,5 +211,8 @@ void Field::Draw(sf::RenderWindow& window,std::vector<Message*> c_messages){
     }
     if(m_status == Status::UPDATE){
         c_messages.at(m_complete_lines.size())->Draw(window);
+    }
+    if(m_status == Status::EXPLODE){
+        c_messages.at(5)->Draw(window);
     }
 }

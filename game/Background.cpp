@@ -179,11 +179,10 @@ void Background::Explode(){
     int randv = rand()%23;
     if(randv%2==0){
         
-        m_second_bg.rotate(0.01);
-        m_third_bg.rotate(0.1);
+        m_second_bg.rotate(0.05);
         m_score.rotate(0.12);
         m_main_bg.move(-randv%5/30.0f,randv%5/30.0f);
-        m_third_bg.move(-randv%3/30.0f,randv%4/30.0f);
+        m_third_bg.move(-randv%3/25.0f,randv%4/25.0f);
         m_score.move(-randv%3/30.0f,randv%4/30.0f);
         m_rose1.move(-randv%3,randv%4);
         m_rose2.move(-randv%5,randv%4);
@@ -193,11 +192,10 @@ void Background::Explode(){
     }
     
     if(randv%2!=0){
-        m_second_bg.rotate(-0.01);
-        m_third_bg.rotate(-0.1);
+        m_second_bg.rotate(-0.05);
         m_score.rotate(-0.12);
         m_main_bg.move(randv%5/30.0f,-randv%5/30.0f);
-        m_third_bg.move(randv%3/30.0f,-randv%4/30.0f);
+        m_third_bg.move(randv%3/25.0f,-randv%4/25.0f);
         m_score.move(randv%3/30.0f,-randv%4/30.0f);
         m_rose1.move(-randv%3,randv%5);
         m_rose1.rotate(0.3f);

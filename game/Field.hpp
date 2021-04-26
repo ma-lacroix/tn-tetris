@@ -44,7 +44,7 @@ public:
     void Add_field(sf::RectangleShape);
     int Collision(sf::RectangleShape,sf::Vector2f,sf::Vector2f);
     bool CheckEndGame();
-    void Explode(float);
+    void Explode(float,Message*);
     void Draw(sf::RenderWindow&,std::vector<Message*>);
 };
 

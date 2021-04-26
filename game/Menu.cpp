@@ -57,13 +57,13 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     }
     
     m_pause_b.setTexture(&m_pause_textu_b);
-    m_pause_b.setFillColor(sf::Color(255,255,255,210));
+    m_pause_b.setFillColor(sf::Color(255,255,255,240));
     m_pause_b.setSize(c_screen_size);
     m_pause_msg.setTexture(&m_pause_textu_msg);
     m_pause_msg.setSize(c_screen_size);
 
     m_game_over_b.setTexture(&m_game_over_textu_b);
-    m_game_over_b.setFillColor(sf::Color(255,255,255,190));
+    m_game_over_b.setFillColor(sf::Color(255,255,255,175));
     m_game_over_b.setSize(c_screen_size*1.5f);
     m_game_over_b.setOrigin(100.0f,100.0f);
     m_game_over_msg.setTexture(&m_game_over_textu_msg);

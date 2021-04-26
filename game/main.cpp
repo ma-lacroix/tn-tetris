@@ -40,9 +40,10 @@ std::vector<Piece*> gen(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int n
 
 std::vector<Message*> gen2(sf::Font c_font,int c_size,sf::Vector2f c_pos,float c_speed){
     
-    std::vector<std::string> msgs = {"","GOOD!","ALL\n RIGHT!","YEAH\n YEAH\n YEAH!","OW!\nNOW!\nBROWN!\nCOW!\n"};
+    std::vector<std::string> msgs = {"","GOOD!","ALL\n RIGHT!","YEAH\n YEAH\n YEAH!",
+                                    "OW!\nNOW!\nBROWN!\nCOW!\n","GAME OVER"};
     std::vector<Message*> c_messages;
-    for(int i {0};i<5;++i){
+    for(size_t i {0};i<msgs.size();++i){
         Message* m = new Message(c_font,c_size,msgs.at(i),c_pos,c_speed);
         c_messages.push_back(m);
     }
@@ -104,8 +105,8 @@ int main(){
     std::vector<Piece*> pieces = gen(background->Get_play_size(),background->Get_play_pos(),200);
     std::vector<Message*> messages = gen2(font,300,{SCREEN_WIDTH,SCREEN_HEIGHT/3},10.0f);
     
-    // State state = State::INTRO;
-    State state = State::GAME_OVER;
+    State state = State::INTRO;
+    // State state = State::GAME_OVER;
     
     // Start the game loop
     while (window.isOpen())
@@ -262,7 +263,7 @@ int main(){
             int randv = rand()%23;
             view.setCenter(screen_size.x/2.0f+randv,screen_size.y/2.0f+randv*1.5f);
             background->Explode();
-            field->Explode(deltaTime);
+            field->Explode(deltaTime,messages.at(5));
         }
         
         if(field->m_status==Field::Status::GAME_OVER){
