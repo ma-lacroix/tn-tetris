@@ -10,9 +10,16 @@
 
 Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     
+    this->m_font = c_font;
+    m_vs_size = 30.0f;
+    m_s_size = 50.0f;
+    m_b_size = 65.0f;
+    m_selection = 0.0f;
+
     if(!m_easy_textu_1.loadFromFile("Resources/images/b_m_easy_peasy_deselected.png")){
          std::cout << "error loading file" << std::endl;
     }
+
     if(!m_easy_textu_2.loadFromFile("Resources/images/b_m_easy_peasy_selected.png")){
          std::cout << "error loading file" << std::endl;
     }
@@ -20,6 +27,7 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     if(!m_medium_textu_1.loadFromFile("Resources/images/b_m_dude_seriously_deselected.png")){
          std::cout << "error loading file" << std::endl;
     }
+
     if(!m_medium_textu_2.loadFromFile("Resources/images/b_m_dude_seriously_selected.png")){
          std::cout << "error loading file" << std::endl;
     }
@@ -27,15 +35,36 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     if(!m_hard_textu_1.loadFromFile("Resources/images/b_m_f_this_deselected.png")){
          std::cout << "error loading file" << std::endl;
     }
+
     if(!m_hard_textu_2.loadFromFile("Resources/images/b_m_f_this_selected.png")){
          std::cout << "error loading file" << std::endl;
     }
     
-    this->m_font = c_font;
-    m_vs_size = 30.0f;
-    m_s_size = 50.0f;
-    m_b_size = 65.0f;
-    m_selection = 0.0f;
+    if(!m_pause_textu_b.loadFromFile("Resources/images/b_pause_layer.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+
+    if(!m_pause_textu_msg.loadFromFile("Resources/images/b_pause_text.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+
+    if(!m_game_over_textu_b.loadFromFile("Resources/images/b_game_over_layer.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+
+    if(!m_game_over_textu_msg.loadFromFile("Resources/images/b_game_over_text.png")){
+         std::cout << "error loading file" << std::endl;
+    }
+    
+    m_pause_b.setTexture(&m_pause_textu_b);
+    m_pause_b.setSize(c_screen_size);
+    m_pause_msg.setTexture(&m_pause_textu_msg);
+    m_pause_msg.setSize(c_screen_size);
+
+    m_game_over_b.setTexture(&m_game_over_textu_b);
+    m_game_over_b.setSize(c_screen_size);
+    m_game_over_msg.setTexture(&m_game_over_textu_msg);
+    m_game_over_msg.setSize(c_screen_size);
     
     t_pause = sf::Text("Pause\n\nSpacebar to restart", m_font, m_s_size);
     t_pause.setFillColor(sf::Color::Red);
@@ -70,6 +99,8 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     for(size_t i {0};i<m_diff_des.size();++i){
         m_diff_des.at(i).setSize(c_screen_size);
         m_diff_sel.at(i).setSize(c_screen_size);
+        m_diff_des.at(i).setPosition(0.0f,-250.0f); // fix to increase screen position
+        m_diff_sel.at(i).setPosition(0.0f,-250.0f);
     }
     
     Update_menu_selection();
@@ -150,9 +181,6 @@ void Menu::Play_d_menu(){
 void Menu::Draw(sf::RenderWindow& window, int c_index){
     
     if(c_index==1){
-//        for(auto& msg: m_difficulty){
-//            window.draw(msg);
-//        }
         for(auto& msg: m_diff_sel){
             window.draw(msg);
         }
@@ -160,10 +188,11 @@ void Menu::Draw(sf::RenderWindow& window, int c_index){
             window.draw(msg);
         }
     }else if(c_index==2){
-        window.draw(m_others.at(0));
-        window.draw(m_others.at(1));
+        window.draw(m_game_over_b);
+        window.draw(m_game_over_msg);
     }else{
-        window.draw(m_others.at(2));
+        window.draw(m_pause_b);
+        window.draw(m_pause_msg);
     }
     
 }

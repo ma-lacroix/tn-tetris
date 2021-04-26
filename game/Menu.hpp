@@ -43,6 +43,14 @@ private:
     sf::Texture m_hard_textu_1;
     sf::RectangleShape m_hard_2;
     sf::Texture m_hard_textu_2;
+    sf::RectangleShape m_pause_b;
+    sf::Texture m_pause_textu_b;
+    sf::RectangleShape m_pause_msg;
+    sf::Texture m_pause_textu_msg;
+    sf::RectangleShape m_game_over_b;
+    sf::Texture m_game_over_textu_b;
+    sf::RectangleShape m_game_over_msg;
+    sf::Texture m_game_over_textu_msg;
     sf::Sound n_start;
     sf::SoundBuffer n1;
     sf::Sound n_switch;
