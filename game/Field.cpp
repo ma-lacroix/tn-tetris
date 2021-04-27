@@ -75,13 +75,13 @@ void Field::DropLines(float c_block_y, float deltaTime, std::vector<Message*> c_
     for(auto line: m_complete_lines){
         for(size_t i {0};i<m_field.size();++i){
             int randv = sqrt(rand()%10+1);
-            m_velocity += deltaTime/(25.0f*lines_counter*2.0f);
+            m_velocity += deltaTime/(25.0f*lines_counter);
             if(m_field_hold.at(i).getPosition().y==line &&
                 m_field.at(i).getPosition().y < 2000.0f){
                     m_field.at(i).setOrigin(20.0f, 20.0f);
                     m_field.at(i).rotate(sinf(i)/randv);
                     m_field.at(i).move(-sinf(i)/randv,m_velocity);
-                    c_messages.at(lines_counter)->Move(deltaTime/(lines_counter*4));
+                    c_messages.at(lines_counter)->Move(deltaTime/(lines_counter*4.0f));
                     ++counter;
             }
         }

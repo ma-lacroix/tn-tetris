@@ -29,8 +29,8 @@ void resizedView(const sf::RenderWindow& window, sf::View& view, const float vie
 std::vector<Piece*> gen(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int num_pieces){
     std::vector<Piece*> c_pieces;
     for(int i {0};i<num_pieces;++i){
-        srand((int)time(0) * i * 5);
-        int c_type = (rand() % 1)+1;
+        srand((int)time(0) * i * 30001);
+        int c_type = (rand() % 7)+1;
         Piece* p = new Piece(c_play_size,c_play_pos,c_type);
         c_pieces.push_back(p);
     }
@@ -76,7 +76,7 @@ int main(){
     n_pause.setBuffer(n13);
     n_pause.setVolume(60.0f);
     
-    // time related stuff
+    // time stuff
     sf::Clock clock;
     sf::Clock clock2;
     float totalTime {0.0f};
@@ -104,7 +104,6 @@ int main(){
     std::vector<Message*> messages = gen2(font,300,{SCREEN_WIDTH,SCREEN_HEIGHT/3},10.0f);
     
     State state = State::INTRO;
-    // State state = State::GAME_OVER;
     
     // Start the game loop
     while (window.isOpen())
