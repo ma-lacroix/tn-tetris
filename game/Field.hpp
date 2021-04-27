@@ -26,6 +26,8 @@ private:
     sf::SoundBuffer n4;
     sf::Sound n_explode;
     sf::SoundBuffer n5;
+    sf::Sound n_gameOver;
+    sf::SoundBuffer n12;
     float m_velocity_init;
     float m_velocity;
     
@@ -44,7 +46,7 @@ public:
     void Add_field(sf::RectangleShape);
     int Collision(sf::RectangleShape,sf::Vector2f,sf::Vector2f);
     bool CheckEndGame();
-    void Explode(float,Message*);
+    void Explode(float);
     void Draw(sf::RenderWindow&,std::vector<Message*>);
 };
 

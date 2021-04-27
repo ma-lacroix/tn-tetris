@@ -20,6 +20,12 @@ Field::Field(){
     
     n5.loadFromFile("Resources/sounds/n_explode1.wav");
     n_explode.setBuffer(n5);
+
+    n12.loadFromFile("Resources/sounds/n_gameOver.wav");
+    n_gameOver.setBuffer(n12);
+    n_gameOver.setPitch(0.9f);
+    n_gameOver.setVolume(90);
+
 }
 
 Field::~Field(){
@@ -69,7 +75,7 @@ void Field::DropLines(float c_block_y, float deltaTime, std::vector<Message*> c_
     for(auto line: m_complete_lines){
         for(size_t i {0};i<m_field.size();++i){
             int randv = sqrt(rand()%10+1);
-            m_velocity += deltaTime/(35.0f*lines_counter);
+            m_velocity += deltaTime/(25.0f*lines_counter*2.0f);
             if(m_field_hold.at(i).getPosition().y==line &&
                 m_field.at(i).getPosition().y < 2000.0f){
                     m_field.at(i).setOrigin(20.0f, 20.0f);
@@ -187,7 +193,7 @@ bool Field::CheckEndGame(){
     return false;
 }
 
-void Field::Explode(float deltaTime, Message* c_message){
+void Field::Explode(float deltaTime){
     int counter {0};
     for(size_t i {0};i<m_field.size();++i){
         int randv = sqrt(rand()%10+1);
@@ -196,12 +202,11 @@ void Field::Explode(float deltaTime, Message* c_message){
             m_field.at(i).setOrigin(20.0f, 20.0f);
             m_field.at(i).rotate(sinf(i)/randv);
             m_field.at(i).move(-sinf(i)/randv,m_velocity);
-            c_message->Move(deltaTime/(20.0f));
             ++counter;
         }
     }
     if(counter==0){
-        c_message->Play_noise(4);
+        n_gameOver.play();
         m_status = Status::GAME_OVER;
     }
 }

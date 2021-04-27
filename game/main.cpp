@@ -30,7 +30,7 @@ std::vector<Piece*> gen(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int n
     std::vector<Piece*> c_pieces;
     for(int i {0};i<num_pieces;++i){
         srand((int)time(0) * i * 5);
-        int c_type = (rand() % 7)+1;
+        int c_type = (rand() % 1)+1;
         Piece* p = new Piece(c_play_size,c_play_pos,c_type);
         c_pieces.push_back(p);
     }
@@ -41,7 +41,7 @@ std::vector<Piece*> gen(sf::Vector2f c_play_size, sf::Vector2f c_play_pos, int n
 std::vector<Message*> gen2(sf::Font c_font,int c_size,sf::Vector2f c_pos,float c_speed){
     
     std::vector<std::string> msgs = {"","GOOD!","ALL\n RIGHT!","YEAH\n YEAH\n YEAH!",
-                                    "OW!\nNOW!\nBROWN!\nCOW!\n","GAME OVER"};
+                                    "OW!\nNOW!\nBROWN!\nCOW!\n"};
     std::vector<Message*> c_messages;
     for(size_t i {0};i<msgs.size();++i){
         Message* m = new Message(c_font,c_size,msgs.at(i),c_pos,c_speed);
@@ -176,7 +176,6 @@ int main(){
                 menu->Play_d_menu();
             }
             
-            
             if(state == State::DIFFICULTY && event.type == sf::Event::KeyPressed){
                 if(event.key.code == sf::Keyboard::Up){
                     menu->Move_selector(-1.0f);
@@ -261,7 +260,7 @@ int main(){
             int randv = rand()%23;
             view.setCenter(screen_size.x/2.0f+randv,screen_size.y/2.0f+randv*1.5f);
             background->Explode();
-            field->Explode(deltaTime,messages.at(4));
+            field->Explode(deltaTime);
         }
         
         if(field->m_status==Field::Status::GAME_OVER){
