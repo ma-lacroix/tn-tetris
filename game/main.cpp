@@ -2,7 +2,7 @@
 //
 //  Created by Marc-Antoine Lacroix on 21/03/2021.
 //  Art by Johnny Khalil
-//  Music by Tri-Tachyon & Alexandr Zhelanov (obtained on Opengameart.org)
+//  Music by Tri-Tachyon & Alexandr Zhelanov (obtained on Opengameart.org with some sound effects)
 //  Copyright © 2021 Marc-Antoine Lacroix. All rights reserved.
 //
 

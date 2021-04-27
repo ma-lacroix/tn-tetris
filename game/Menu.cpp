@@ -93,7 +93,7 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     Update_menu_selection();
     
     // sounds
-    n1.loadFromFile("Resources/sounds/n_start.wav");
+    n1.loadFromFile("Resources/sounds/n_explode2.wav");
     n_start.setBuffer(n1);
     n_start.setVolume(80);
     
@@ -101,7 +101,7 @@ Menu::Menu(sf::Font c_font, sf::Vector2f c_screen_size){
     n_switch.setBuffer(n2);
     n_switch.setVolume(80);
     
-    n3.loadFromFile("Resources/sounds/n_enter.wav");
+    n3.loadFromFile("Resources/sounds/n_explode2.wav");
     n_enter.setBuffer(n3);
     n_enter.setVolume(80);
     
