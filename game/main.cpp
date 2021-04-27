@@ -58,24 +58,23 @@ int main(){
     if (!s_menu.openFromFile("Resources/music/s_menu.ogg")) {
         return EXIT_FAILURE;
     }
-    s_menu.setVolume(40.0f);
+    s_menu.setVolume(30.0f);
     s_menu.setPlayingOffset(sf::seconds(6.5f));
     
     sf::Music s_playing;
     if (!s_playing.openFromFile("Resources/music/s_playing.ogg")) {
         return EXIT_FAILURE;
     }
-    s_playing.setVolume(40.0f);
+    s_playing.setVolume(30.0f);
     s_playing.setLoop(true);
     
     sf::Sound n_pause;
-    sf::SoundBuffer n10;
-    if(!n10.loadFromFile("Resources/sounds/n_pause.wav")){
+    sf::SoundBuffer n13;
+    if(!n13.loadFromFile("Resources/sounds/n_pause.wav")){
         return EXIT_FAILURE;
     }
-    n_pause.setBuffer(n10);
+    n_pause.setBuffer(n13);
     n_pause.setVolume(60.0f);
-    
     
     // time related stuff
     sf::Clock clock;
@@ -92,7 +91,6 @@ int main(){
     sf::Vector2f screen_size {SCREEN_WIDTH,SCREEN_HEIGHT};
     sf::RenderWindow window(sf::VideoMode(screen_size.x,screen_size.y),"TN-TETRIS",sf::Style::Titlebar | sf::Style::Resize);
     sf::View view(screen_size/2.0f,screen_size);
-    
     
     sf::Font font;
     if (!font.loadFromFile("Resources/font/Excludedi.ttf")) {
@@ -218,7 +216,7 @@ int main(){
         }
         
         if(piece_counter==5 && difficulty-0.15f>0.0f){
-            difficulty-=0.15f; // increase difficulty every 10 pieces
+            difficulty-=0.05f; // increase difficulty every 5 pieces
             piece_counter = 0;
         }
         
@@ -263,7 +261,7 @@ int main(){
             int randv = rand()%23;
             view.setCenter(screen_size.x/2.0f+randv,screen_size.y/2.0f+randv*1.5f);
             background->Explode();
-            field->Explode(deltaTime,messages.at(5));
+            field->Explode(deltaTime,messages.at(4));
         }
         
         if(field->m_status==Field::Status::GAME_OVER){
@@ -304,7 +302,7 @@ int main(){
             background->Draw(window);
             menu->Draw(window, 3);
         }else{
-            // view.setCenter(screen_size.x/2.0f,screen_size.y/2.0f);
+            view.setCenter(screen_size.x/2.0f,screen_size.y/2.0f);
             menu->Move_gameOver(totalTime);
             background->Draw(window);
             menu->Draw(window,2);

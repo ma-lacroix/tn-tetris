@@ -38,10 +38,15 @@ Message::Message(sf::Font c_font,int c_size,std::string c_message,sf::Vector2f c
     n_onbc.setBuffer(n11);
     n_onbc.setVolume(90);
     
+    n12.loadFromFile("Resources/sounds/n_gameOver.wav");
+    n_gameOver.setBuffer(n12);
+    n_gameOver.setVolume(90);
+
     m_sounds.push_back(n_good);
     m_sounds.push_back(n_all_right);
     m_sounds.push_back(n_yyy);
     m_sounds.push_back(n_onbc);
+    m_sounds.push_back(n_gameOver);
     
 }
 

@@ -32,7 +32,9 @@ private:
     sf::SoundBuffer n10;
     sf::Sound n_onbc;
     sf::SoundBuffer n11;
-    
+    sf::Sound n_gameOver;
+    sf::SoundBuffer n12;
+
 public:
     Message(sf::Font,int,std::string,sf::Vector2f,float);
     ~Message();
