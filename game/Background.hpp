@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <math.h>
 #include "Pieces.hpp"
 
 class Background {

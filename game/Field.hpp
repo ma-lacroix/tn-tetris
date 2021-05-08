@@ -14,6 +14,7 @@
 #include <SFML/Audio.hpp>
 #include <vector>
 #include <iostream>
+#include <math.h>
 #include "Messages.hpp"
 
 class Field {
